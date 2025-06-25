@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+}
+
+h1 {
+	margin-bottom: 20px;
+	font-size: 43px;
+	font-weight: bold;
+	color: white;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(var(--level, 3), 100px);
+	grid-template-rows: repeat(var(--level, 3), 100px);
+	gap: 10px;
+}
+
+.cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	font-size: 40px;
+	border-radius: 10px;
+	background: linear-gradient(to top left, #ff9966 50%, #ff5e62);
+}
+
+button {
+	margin-top: 20px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation: fadeIn 0.3s ease-in;
+}
