@@ -1,4 +1,28 @@
 import { moviesarray } from "./constants";
+import {
+  allmovies,
+  comedymovies,
+  actionmovies,
+  dramamovies,
+  thrillermovies,
+  category,
+} from "./elements";
+
+//UI FUNCTIONS
+
+function Category(length: number = 16) {
+  category.innerHTML = "";
+  for (let i = 1; i <= Math.ceil(length / 3); i++) {
+    let newLiElement = document.createElement("li");
+    newLiElement.classList.add("page-item");
+    let newAElement = document.createElement("a");
+    newAElement.classList.add("page-link");
+    newAElement.href = "#";
+    newAElement.textContent = `${i}`;
+    newLiElement.append(newAElement);
+    category.append(newLiElement);
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   // Genre selection animation
@@ -24,3 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+Math.ceil(moviesarray.length / 3);
