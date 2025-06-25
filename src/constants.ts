@@ -2,7 +2,7 @@ export const moviesarray = [
   {
     _id: "6858de082cc606f4cbe06633",
     title: "Airplane",
-    numberInStock: 5,
+    numberInStock: 5, 
     dailyRentalRate: 2,
     genre: {
       _id: "6858de082cc606f4cbe06631",
