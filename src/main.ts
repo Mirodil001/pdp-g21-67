@@ -115,10 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const validGenres = ["Comedy", "Action", "Romance", "Thriller"];
 
       lengthMovies = moviesarray.filter((movie) =>
-        selectedGenre === "All"
-          ? true
-          : validGenres.includes(selectedGenre) &&
-            movie.genre.name === selectedGenre
+        selectedGenre === "All" ? true : movie.genre.name === selectedGenre
       );
 
       searchInput.value = "";
@@ -142,5 +139,6 @@ searchInput.addEventListener("input", () => {
   );
 
   Category(tempSearchResults.length);
+
   displayMoviesByPage(1, tempSearchResults);
 });
